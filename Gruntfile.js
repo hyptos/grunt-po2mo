@@ -31,15 +31,18 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     po2mo: {
       stage: {
-        src: 'test/fixtures/fr.po',
-        dest: 'tmp/fr.mo',
+        src: 'test/fixtures/fr/message.po',
+        dest: 'tmp/fr/message.mo',
       },
       prod: {
         options: {
           deleteSrc: true
         },
-        src: 'tmp/fixtures/fr.po',
-        dest: 'tmp/fr.mo'
+        src: 'tmp/fr/message.po',
+        dest: 'tmp/fr/message.mo'
+      },
+      multiple: {
+        src: ['test/fixtures/**/*.po'],
       }
     },
 
@@ -59,7 +62,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   grunt.registerTask('copy', 'Copy fixtures to a temp location.', function() {
-    grunt.file.copy('test/fixtures/fr.po', 'tmp/fixtures/fr.po');
+    grunt.file.copy('test/fixtures/fr/message.po', 'tmp/fr/message.po');
   });
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
