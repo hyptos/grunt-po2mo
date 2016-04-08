@@ -1,23 +1,27 @@
 {
-  "name": "grunt-po2mo",
+  "name": "grunt-po2mo-multiFiles",
   "description": "Compile .po files into binary .mo files with msgfmt.",
-  "version": "0.1.2",
-  "homepage": "https://github.com/MicheleBertoli/grunt-po2mo",
-  "author": {
+  "version": "0.1.3",
+  "homepage": "https://github.com/hyptos/grunt-po2mo",
+  "contributors":[{
     "name": "Michele Bertoli",
     "email": "michele@berto.li",
     "url": "http://michele.berto.li"
-  },
+  },{
+    "name":"Antoine Martin",
+    "email":"hyptos974@gmail.com",
+    "url":"http://antoine-martin.me"
+  }],
   "repository": {
     "type": "git",
-    "url": "git://github.com/MicheleBertoli/grunt-po2mo.git"
+    "url": "git://github.com/hyptos/grunt-po2mo.git"
   },
   "bugs": {
-    "url": "https://github.com/MicheleBertoli/grunt-po2mo/issues"
+    "url": "https://github.com/hyptos/grunt-po2mo/issues"
   },
   "licenses": [{
     "type": "MIT",
-    "url": "https://github.com/MicheleBertoli/grunt-po2mo/blob/master/LICENSE-MIT"
+    "url": "https://github.com/hyptos/grunt-po2mo/blob/master/LICENSE-MIT"
   }],
   "main": "Gruntfile.js",
   "engines": {
