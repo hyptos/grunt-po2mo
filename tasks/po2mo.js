@@ -7,7 +7,8 @@
  */
 'use strict';
 
-var exec = require('sync-exec');
+// var exec = require('sync-exec');
+var exec = require("child_process").exec;
 
 module.exports = function (grunt) {
 
@@ -25,12 +26,15 @@ module.exports = function (grunt) {
             var command = 'msgfmt -o ' + dest + ' ' + src;
 
             grunt.verbose.writeln('Executing: ' + command);
-            var result = exec(command);
-            grunt.verbose.writeln('Executed with status: ' + result.status);
 
-            if (result.status !== 0) {
-                grunt.log.error(result.stderr);
-            }
+            var child = exec(command,
+                function(error, stdout, stderr){
+                    if(error !== null) {
+                         console.log('exec error: ' + error);
+                    }
+                }
+            );
+
         };
 
         this.files.forEach(function (file) {
