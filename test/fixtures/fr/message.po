@@ -12,6 +12,3 @@ msgstr ""
 
 msgid "My name is %s.\n"
 msgstr "Je m'appelle %s.\n"
-
-msgid "My name is %s.\n"
-msgstr "Je m'appelle %s.\n"
