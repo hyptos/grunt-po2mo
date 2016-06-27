@@ -27,9 +27,12 @@ exports.po2mo = {
   multiple: function(test){
     test.expect(1);
 
-    var expectedMo = grunt.file.exists('test/fixtures/fr/message.mo');
-    test.equal(expectedMo, true);
-    grunt.file.delete('test/fixtures/fr/message.mo');
+    var expectedMo1 = grunt.file.exists('test/fixtures/fr/message1.mo');
+    var expectedMo2 = grunt.file.exists('test/fixtures/fr/message2.mo');
+    test.equal(expectedMo1, true);
+    test.equal(expectedMo2, true);
+    grunt.file.delete('test/fixtures/fr/message1.mo');
+    grunt.file.delete('test/fixtures/fr/message2.mo');
 
     test.done();
   }

@@ -7,7 +7,7 @@
  */
 'use strict';
 
-var exec = require("child_process").exec;
+var exec = require("child_process").execSync;
 
 module.exports = function (grunt) {
 
